@@ -6,14 +6,19 @@ export default class Main {
   fizzBuzzers: IFizzBuzzer[];
 
   constructor() {
-    this.fizzBuzzers = [new Buzz(), new Fizz()];
+    this.fizzBuzzers = [new Fizz(), new Buzz()];
   }
 
-  Check = (num: number): string => {
+  Check = (input: number): string => {
     this.fizzBuzzers.forEach((validator) => {
-      validator.ReturnString(num);
+      validator.ReturnString(input);
     });
-    return "";
+
+    let resultsString = this.fizzBuzzers
+      .map((validator) => validator.ReturnString(input))
+      .join('');
+
+    return resultsString.length > 0 ? resultsString : input.toString();
   };
 }
 

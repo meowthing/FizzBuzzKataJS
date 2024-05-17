@@ -2,10 +2,11 @@
     "compilerOptions": {
         "sourceMap": true,
         "target": "ES6",
-        "module": "Node16",
+        "module": "NodeNext",
         "outDir": "out",
-        "allowJs": false,
+        "allowJs": true,
         "allowImportingTsExtensions": true,
         "noEmit": true,
+        "esModuleInterop": true
     }
 }

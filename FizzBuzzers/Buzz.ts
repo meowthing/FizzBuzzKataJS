@@ -2,6 +2,10 @@ import IFizzBuzzer from "./IFizzBuzzer.ts";
 
 export default class Buzz implements IFizzBuzzer {
   ReturnString(input: number): string {
-    return "Buzz";
+    if (input % 5 == 0) {
+      return "Buzz";
+    } else {
+      return "";
+    }
   }
 }
