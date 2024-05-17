@@ -1,4 +1,4 @@
-import IFizzBuzzer from "./IFizzBuzzer";
+import IFizzBuzzer from "./IFizzBuzzer.ts";
 
 export default class Fizz implements IFizzBuzzer {
   ReturnString(input: number): string {

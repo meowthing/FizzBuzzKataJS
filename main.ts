@@ -1,6 +1,6 @@
-import Buzz from "./FizzBuzzers/Buzz";
-import Fizz from "./FizzBuzzers/Fizz";
-import IFizzBuzzer from "./FizzBuzzers/IFizzBuzzer";
+import Buzz from "./FizzBuzzers/Buzz.ts";
+import Fizz from "./FizzBuzzers/Fizz.ts";
+import IFizzBuzzer from "./FizzBuzzers/IFizzBuzzer.ts";
 
 export default class Main {
   fizzBuzzers: IFizzBuzzer[];
@@ -9,13 +9,13 @@ export default class Main {
     this.fizzBuzzers = [new Buzz(), new Fizz()];
   }
 
-  Check = (): string => {
+  Check = (num: number): string => {
     this.fizzBuzzers.forEach((validator) => {
-      validator.ReturnString(1);
+      validator.ReturnString(num);
     });
     return "";
   };
 }
 
 const main = new Main();
-main.Check();
+main.Check(1);

@@ -1,6 +1,8 @@
-import Main from "./main";
-import test
+import Main from "./main.ts";
+import { jest, test, expect } from "@jest/globals";
+
+const _main = new Main();
 
 test("3 equals Fizz", () => {
-  expect(Main.check(3)).toBe("Fizz");
+  expect(_main.Check(3)).toBe("Fizz");
 });
